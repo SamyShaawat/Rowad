@@ -51,9 +51,9 @@ test.describe('Navigation', () => {
 
     await expect(page).toHaveURL(/.*\/about/);
     await expect(
-      page.getByRole('heading', { name: /about us|aboutrowad|about rowad/i }).or(
-        page.locator('h1, h2').first(),
-      ),
+      page
+        .getByRole('heading', { name: /about us|aboutrowad|about rowad/i })
+        .or(page.locator('h1, h2').first())
     ).toBeVisible();
   });
 
@@ -64,7 +64,9 @@ test.describe('Navigation', () => {
     await contactLink.click();
 
     await expect(page).toHaveURL(/.*\/contact/);
-    await expect(page.getByRole('heading', { name: /tell us what you want to build/i })).toBeVisible();
+    await expect(
+      page.getByRole('heading', { name: /tell us what you want to build/i })
+    ).toBeVisible();
   });
 
   // ---------------------------------------------------------------------------

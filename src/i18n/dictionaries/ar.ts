@@ -20,7 +20,7 @@ export const ar: typeof en = {
   },
   company: {
     fullName: 'رواد لتطوير البرمجيات',
-    location: '584 طريق الحرية، جليم، الإسكندرية، مصر',
+    location: 'الإسكندرية، مصر',
     workingHours: 'من الأحد إلى الخميس: 9:00 ص - 5:00 م',
     weekend: 'الجمعة والسبت: مغلق',
   },
@@ -30,7 +30,7 @@ export const ar: typeof en = {
     reachUs: 'تواصل معنا',
     callCenter: 'اتصل بنا',
     inquiries: 'الاستفسارات',
-    mainOffice: 'المقر الرئيسي',
+    mainOffice: 'مقرنا في',
   },
   stats: [
     { value: '50+', label: 'عميل' },
@@ -137,7 +137,7 @@ export const ar: typeof en = {
     staging: 'تجريبي',
     production: 'إنتاج',
     Monitoring: 'المراقبة',
-    'uptime · last 30 days': 'وقت التشغيل · آخر 30 يومًا',
+    'running in production': 'يعمل على الإنتاج',
     'Backups ✓': 'نسخ احتياطي ✓',
     'Alerts: 0': 'التنبيهات: 0',
     '↺ automatic rollback if a health check fails': '↺ تراجع تلقائي عند فشل فحص السلامة',
@@ -149,8 +149,7 @@ export const ar: typeof en = {
     agents:
       'مسار أتمتة: بريد جديد يشغّل وكيلًا ذكيًا، ثم يوافق شخص، ثم يُحدَّث نظام ERP وتنتهي المهمة',
     chatbot: 'شات بوت يجيب العملاء من واتساب وماسنجر ومحادثة الموقع، ثم يحوّل المحادثة إلى موظف',
-    cloud:
-      'كود يُرسَل ويُختبر ويُنشر على خوادم التطوير والتجربة والإنتاج، بوقت تشغيل 99.9 بالمئة ونسخ احتياطي',
+    cloud: 'كود يُرسَل ويُختبر ويُنشر على خوادم التطوير والتجربة والإنتاج',
   },
   home: {
     hero: {
@@ -302,11 +301,10 @@ export const ar: typeof en = {
     whatsapp: 'تحدث معنا على واتساب',
     infoTitle: 'معلومات التواصل',
     callNow: 'اتصل بنا الآن',
-    openMaps: 'افتح في خرائط جوجل',
     cards: {
       phone: { title: 'الهاتف' },
       email: { title: 'البريد الإلكتروني', note: 'مناسب لتفاصيل المشروع الأطول' },
-      office: { title: 'المكتب', note: 'اللقاءات الشخصية بموعد مسبق' },
+      office: { title: 'الموقع', note: 'اجتماعات أونلاين من أي مكان' },
       hours: { title: 'ساعات العمل' },
     },
     faqTitle: 'الأسئلة الأكثر شيوعًا',

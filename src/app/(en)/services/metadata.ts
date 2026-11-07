@@ -15,7 +15,6 @@ export const servicesMetadata: Metadata = {
     'n8n automation',
     'workflow automation',
     'ERP implementation services',
-    'Odoo development egypt',
     'WhatsApp chatbot',
     'web hosting services',
     'DevOps services egypt',

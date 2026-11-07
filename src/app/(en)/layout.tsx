@@ -33,7 +33,6 @@ export const metadata: Metadata = {
     'ERP system',
     'ERP implementation',
     'ERP egypt',
-    'Odoo development',
     'web hosting',
     'web hosting egypt',
     'managed hosting',

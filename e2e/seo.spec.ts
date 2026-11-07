@@ -1,6 +1,28 @@
 import { test, expect } from '@playwright/test';
 
 test.describe('Structured data and unverified claims', () => {
+  test('only confirmed facts appear on the site (no office, social pages, uptime or staff numbers)', async ({
+    request,
+  }) => {
+    for (const path of ['/', '/contact', '/services', '/ar', '/ar/contact', '/ar/services']) {
+      const html = await (await request.get(path)).text();
+      for (const claim of [
+        'numberOfEmployees',
+        'priceRange',
+        'GeoCoordinates',
+        'streetAddress',
+        'Horreya',
+        'google.com/maps',
+        'linkedin.com',
+        'facebook.com',
+        '99.9',
+        'Odoo',
+      ]) {
+        expect(html, `${path} must not contain ${claim}`).not.toContain(claim);
+      }
+    }
+  });
+
   test('home has a plain JSON-LD tag with the Organization logo', async ({ request }) => {
     // Raw HTML (no JavaScript), like a simple crawler or validator would fetch it.
     const html = await (await request.get('/')).text();
@@ -122,10 +144,13 @@ test.describe('Structured data and unverified claims', () => {
     );
     expect(text).toContain('"dayOfWeek":["Sunday","Monday","Tuesday","Wednesday","Thursday"]');
     expect(text).toContain('رواد لتطوير البرمجيات');
+    expect(text).toContain('"foundingDate":"1997"');
     for (const unconfirmed of [
       'numberOfEmployees',
       'priceRange',
-      'foundingDate',
+      'sameAs',
+      'streetAddress',
+      'GeoCoordinates',
       'Next.js',
       '99.9',
     ]) {

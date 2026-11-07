@@ -40,12 +40,23 @@ test.describe('Mobile Menu', () => {
 
     // Mobile menu container appears after clicking hamburger
     // Look for the mobile menu content inside the header
-    const mobileMenu = page.locator('header').getByRole('link', { name: 'Home', exact: true }).first();
+    const mobileMenu = page
+      .locator('header')
+      .getByRole('link', { name: 'Home', exact: true })
+      .first();
     await expect(mobileMenu).toBeVisible();
-    await expect(page.locator('header').getByRole('link', { name: 'Services', exact: true }).first()).toBeVisible();
-    await expect(page.locator('header').getByRole('link', { name: 'Our Clients', exact: true }).first()).toBeVisible();
-    await expect(page.locator('header').getByRole('link', { name: 'About Us', exact: true }).first()).toBeVisible();
-    await expect(page.locator('header').getByRole('link', { name: 'Contact', exact: true }).first()).toBeVisible();
+    await expect(
+      page.locator('header').getByRole('link', { name: 'Services', exact: true }).first()
+    ).toBeVisible();
+    await expect(
+      page.locator('header').getByRole('link', { name: 'Our Clients', exact: true }).first()
+    ).toBeVisible();
+    await expect(
+      page.locator('header').getByRole('link', { name: 'About Us', exact: true }).first()
+    ).toBeVisible();
+    await expect(
+      page.locator('header').getByRole('link', { name: 'Contact', exact: true }).first()
+    ).toBeVisible();
   });
 
   test('closes mobile menu when hamburger button (X) is clicked again', async ({ page }) => {
@@ -56,7 +67,10 @@ test.describe('Mobile Menu', () => {
     await page.waitForTimeout(500);
 
     // Verify menu is open - home link in header should be visible (not in nav)
-    const homeLinkInHeader = page.locator('header').getByRole('link', { name: 'Home', exact: true }).first();
+    const homeLinkInHeader = page
+      .locator('header')
+      .getByRole('link', { name: 'Home', exact: true })
+      .first();
     await expect(homeLinkInHeader).toBeVisible();
 
     // Click again to close
@@ -88,11 +102,16 @@ test.describe('Mobile Menu', () => {
     await hamburgerBtn.click();
     await page.waitForTimeout(500);
 
-    const contactLink = page.locator('header').getByRole('link', { name: 'Contact', exact: true }).first();
+    const contactLink = page
+      .locator('header')
+      .getByRole('link', { name: 'Contact', exact: true })
+      .first();
     await contactLink.click();
 
     await expect(page).toHaveURL(/.*\/contact/);
-    await expect(page.getByRole('heading', { name: /tell us what you want to build/i })).toBeVisible();
+    await expect(
+      page.getByRole('heading', { name: /tell us what you want to build/i })
+    ).toBeVisible();
   });
 
   // ---------------------------------------------------------------------------
@@ -104,7 +123,10 @@ test.describe('Mobile Menu', () => {
     await hamburgerBtn.click();
     await page.waitForTimeout(500);
 
-    const servicesLink = page.locator('header').getByRole('link', { name: 'Services', exact: true }).first();
+    const servicesLink = page
+      .locator('header')
+      .getByRole('link', { name: 'Services', exact: true })
+      .first();
     await servicesLink.click();
 
     await page.waitForURL(/.*\/services/);
@@ -122,7 +144,10 @@ test.describe('Mobile Menu', () => {
     await hamburgerBtn.click();
     await page.waitForTimeout(500);
 
-    const getStartedBtn = page.locator('header').getByRole('link', { name: /get started/i }).first();
+    const getStartedBtn = page
+      .locator('header')
+      .getByRole('link', { name: /get started/i })
+      .first();
     await expect(getStartedBtn).toBeVisible();
 
     await getStartedBtn.click();

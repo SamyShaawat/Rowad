@@ -723,10 +723,7 @@ function CloudArt({ label, locale }: { label?: string; locale?: Locale }) {
     <Canvas
       id="cl"
       tint={panel.cloud}
-      label={
-        label ??
-        'Code is pushed, tested and deployed to dev, staging and production servers, with 99.9 percent uptime and backups'
-      }
+      label={label ?? 'Code is pushed, tested and deployed to dev, staging and production servers'}
     >
       {/* code */}
       <rect
@@ -774,13 +771,13 @@ function CloudArt({ label, locale }: { label?: string; locale?: Locale }) {
         className={FLIP_BACK}
       />
       <Link d="M308 122 H328" id="cl" arrow />
-      {/* uptime */}
+      {/* live */}
       <Card x={334} y={62} w={126} h={120} r={18} />
       <Txt x={348} y={96} size={25} weight={600}>
-        99.9%
+        Live
       </Txt>
       <Txt x={348} y={114} size={9} cls="fill-slate-600 dark:fill-slate-300" fill="">
-        uptime · last 30 days
+        running in production
       </Txt>
       <path
         d="M348 150 L366 140 L384 146 L402 134 L420 142 L446 130"
