@@ -39,6 +39,8 @@ test.describe('Accessibility (axe: WCAG 2.2 A/AA and best practice)', () => {
       await page.evaluate(() => {
         document.documentElement.classList.remove('dark');
       });
+      // colours fade between themes; let the fade finish so axe reads the final colours
+      await page.waitForTimeout(600);
       const result = await new AxeBuilder({ page }).withTags(['wcag2a', 'wcag2aa']).analyze();
       expect(
         result.violations.map((v) => v.id),

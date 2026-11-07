@@ -4,7 +4,7 @@
   "description": "Software company in Alexandria, Egypt designing, building and running custom software, from idea to production.",
   "start_url": "/",
   "display": "standalone",
-  "theme_color": "#f97316",
+  "theme_color": "#fc8e05",
   "background_color": "#161616",
   "orientation": "portrait-primary",
   "scope": "/",
