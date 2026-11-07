@@ -193,6 +193,15 @@ jobs:
             echo "$path -> $code"
             [ "$code" = "200" ] || { echo "Smoke test failed for $path"; exit 1; }
           done
+          # Security headers must be on the live site (they come from .htaccess)
+          headers=$(curl -sI --retry 3 --retry-delay 5 --retry-all-errors "https://rowad.com/")
+          for h in strict-transport-security content-security-policy referrer-policy permissions-policy x-content-type-options; do
+            echo "$headers" | grep -qi "^$h:" || { echo "Smoke test failed: missing $h header"; exit 1; }
+          done
+          # www must redirect to the main host
+          www=$(curl -s -o /dev/null -w '%{redirect_url}' --retry 3 --retry-delay 5 --retry-all-errors "https://www.rowad.com/about")
+          echo "www -> $www"
+          [ "$www" = "https://rowad.com/about" ] || { echo "Smoke test failed: www does not redirect to rowad.com"; exit 1; }
           # The live site must be this exact commit (200s alone cannot tell a stale deploy)
           live=$(curl -s --retry 3 --retry-delay 5 --retry-all-errors "https://rowad.com/version.txt?x=$RANDOM" | tr -d '[:space:]')
           echo "live version: $live (expected $GITHUB_SHA)"
