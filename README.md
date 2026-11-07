@@ -34,7 +34,7 @@ phone. We want to be known for quality, reliability and a customer-first approac
 ## This repository
 
 The code of the company website: a static Next.js site in English and Arabic (right to left),
-deployed to our own hosting on every merge into `dev`.
+deployed to our own hosting on every merge into `dev` ([how it works](docs/DEPLOY.md)).
 
 ## Screenshots
 
