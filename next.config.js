@@ -18,10 +18,4 @@ module.exports = (phase) => ({
     unoptimized: true, // Required for static export
   },
   poweredByHeader: false,
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
-  typescript: {
-    ignoreBuildErrors: true,
-  },
 });

@@ -3,7 +3,6 @@
 import Link from 'next/link';
 import { Logo } from '@/components/ui/Logo';
 import { CurrentYear } from '@/components/ui/CurrentYear';
-import { motion } from 'framer-motion';
 import { MailIcon, PhoneIcon, PinIcon } from '@/components/ui/icons';
 import { RouteConstants, CompanyConstants } from '@constants';
 import { getDictionary, localePath, type Locale } from '@/i18n';

@@ -1,11 +1,14 @@
 {
-  "extends": ["next/core-web-vitals"],
+  "extends": ["next/core-web-vitals", "prettier"],
+  "rules": { "@next/next/no-head-element": "off" },
   "ignorePatterns": [
     "node_modules/",
     ".next/",
+    ".next-dev/",
     "build/",
     "dist/",
     "out/",
+    "e2e/",
     "playwright-report/",
     "test-results/"
   ]
