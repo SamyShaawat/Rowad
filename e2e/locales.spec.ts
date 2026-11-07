@@ -38,12 +38,12 @@ test.describe('Languages', () => {
   test('Arabic footer is fully Arabic, English footer unchanged', async ({ page }) => {
     await page.goto('/ar');
     const footer = page.locator('footer');
-    for (const text of ['استكشف', 'المقر الرئيسي', 'الاستفسارات']) {
+    for (const text of ['استكشف', 'مقرنا في', 'الاستفسارات']) {
       await expect(footer).toContainText(text);
     }
-    await expect(footer).not.toContainText('Main Office');
+    await expect(footer).not.toContainText('Based in');
     await page.goto('/');
-    await expect(page.locator('footer')).toContainText('Main Office');
+    await expect(page.locator('footer')).toContainText('Based in');
   });
 
   test('Footer has no fake newsletter form', async ({ page }) => {

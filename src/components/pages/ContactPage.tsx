@@ -111,14 +111,6 @@ export function ContactPage({ locale }: { locale: Locale }) {
               >
                 {p.whatsapp}
               </Link>
-              <a
-                href={CompanyConstants.MAPS_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-ghost"
-              >
-                {p.openMaps} <span className="inline-block rtl:rotate-180">→</span>
-              </a>
             </div>
           </div>
         </div>

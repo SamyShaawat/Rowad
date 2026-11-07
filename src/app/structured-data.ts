@@ -20,22 +20,12 @@ export const englishJsonLd = {
       image: 'https://rowad.com/images/brand/og-image.jpg',
       description:
         'Rowad for Software Development is a software company in Alexandria, Egypt. We design, build and run custom software for businesses, from idea to production.',
-      numberOfEmployees: {
-        '@type': 'QuantitativeValue',
-        minValue: 10,
-        maxValue: 50,
-      },
+      foundingDate: '1997',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '584 El-Horreya Road, Gleem',
         addressLocality: 'Alexandria',
         addressCountry: 'EG',
         addressRegion: 'Alexandria Governorate',
-      },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: 31.2391,
-        longitude: 29.9598,
       },
       contactPoint: {
         '@type': 'ContactPoint',
@@ -44,11 +34,6 @@ export const englishJsonLd = {
         email: 'info@rowad.com',
         availableLanguage: ['English', 'Arabic'],
       },
-      sameAs: [
-        'https://www.linkedin.com/company/rowad-for-software-development',
-        'https://facebook.com/rowad',
-        'https://wa.me/201091539396',
-      ],
       knowsAbout: [
         'Web Development',
         'Mobile App Development',
@@ -82,17 +67,10 @@ export const englishJsonLd = {
       url: 'https://rowad.com',
       telephone: '+20-109-1539-396',
       email: 'info@rowad.com',
-      priceRange: '$$',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '584 El-Horreya Road, Gleem',
         addressLocality: 'Alexandria',
         addressCountry: 'EG',
-      },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: 31.2391,
-        longitude: 29.9598,
       },
       openingHoursSpecification: [
         {
@@ -163,8 +141,7 @@ export const englishJsonLd = {
             itemOffered: {
               '@type': 'Service',
               name: 'Web Hosting & Cloud',
-              description:
-                'Managed web hosting solutions with 99.9% uptime, SSL, and 24/7 monitoring.',
+              description: 'Managed web hosting and cloud deployment for your website or app.',
             },
           },
         ],
@@ -224,12 +201,10 @@ const logo = {
 };
 const arAddress = {
   '@type': 'PostalAddress',
-  streetAddress: '584 طريق الحرية، جليم',
   addressLocality: 'الإسكندرية',
   addressRegion: 'محافظة الإسكندرية',
   addressCountry: 'EG',
 };
-const geo = { '@type': 'GeoCoordinates', latitude: 31.2391, longitude: 29.9598 };
 
 export const arabicJsonLd = {
   '@context': 'https://schema.org',
@@ -245,7 +220,7 @@ export const arabicJsonLd = {
       description:
         'رواد لتطوير البرمجيات شركة برمجة في الإسكندرية، مصر. نصمم ونبني ونشغّل برمجيات مخصصة للشركات، من الفكرة حتى التشغيل.',
       address: arAddress,
-      geo,
+      foundingDate: '1997',
       contactPoint: {
         '@type': 'ContactPoint',
         telephone: '+20-109-1539-396',
@@ -253,11 +228,6 @@ export const arabicJsonLd = {
         email: 'info@rowad.com',
         availableLanguage: ['Arabic', 'English'],
       },
-      sameAs: [
-        'https://www.linkedin.com/company/rowad-for-software-development',
-        'https://facebook.com/rowad',
-        'https://wa.me/201091539396',
-      ],
       knowsAbout: [
         'تطوير المواقع',
         'تطبيقات الموبايل',
@@ -284,7 +254,6 @@ export const arabicJsonLd = {
       telephone: '+20-109-1539-396',
       email: 'info@rowad.com',
       address: arAddress,
-      geo,
       openingHoursSpecification: [
         {
           '@type': 'OpeningHoursSpecification',

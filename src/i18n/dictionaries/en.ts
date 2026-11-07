@@ -18,7 +18,7 @@ export const en = {
   },
   company: {
     fullName: 'Rowad For Software Development',
-    location: '584 El-Horreya Road, Gleem, Alexandria, Egypt',
+    location: 'Alexandria, Egypt',
     workingHours: 'Sun - Thu: 9:00 AM - 5:00 PM',
     weekend: 'Fri - Sat: Closed',
   },
@@ -28,7 +28,7 @@ export const en = {
     reachUs: 'Reach Us',
     callCenter: 'Call Center',
     inquiries: 'Inquiries',
-    mainOffice: 'Main Office',
+    mainOffice: 'Based in',
   },
   stats: [
     { value: '50+', label: 'Happy Clients' },
@@ -72,8 +72,7 @@ export const en = {
       'An automated workflow: a new email triggers an AI agent, a person approves, the ERP is updated and the job is done',
     chatbot:
       'A chatbot answering customers from WhatsApp, Messenger and web chat, then handing over to a person',
-    cloud:
-      'Code is pushed, tested and deployed to dev, staging and production servers, with 99.9 percent uptime and backups',
+    cloud: 'Code is pushed, tested and deployed to dev, staging and production servers',
   },
   home: {
     hero: {
@@ -227,11 +226,10 @@ export const en = {
     whatsapp: 'Chat on WhatsApp',
     infoTitle: 'Contact Information',
     callNow: 'Call Us Now',
-    openMaps: 'Open in Google Maps',
     cards: {
       phone: { title: 'Phone' },
       email: { title: 'Email', note: 'Best for longer project briefs' },
-      office: { title: 'Office', note: 'Available for in-person meetings by appointment' },
+      office: { title: 'Location', note: 'Online meetings, wherever you are' },
       hours: { title: 'Working Hours' },
     },
     faqTitle: 'Frequently Asked Questions',

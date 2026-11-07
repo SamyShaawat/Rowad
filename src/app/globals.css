@@ -7,7 +7,6 @@ html[dir='rtl'] {
   --font-plex: var(--font-plex-arabic), var(--font-plex-latin);
 }
 
-
 * {
   box-sizing: border-box;
   padding: 0;
