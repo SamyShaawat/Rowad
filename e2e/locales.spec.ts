@@ -116,7 +116,7 @@ test.describe('Languages', () => {
     ] as const) {
       await page.goto(path);
       const card = await page
-        .locator('main section a[href^="https://wa.me"]')
+        .locator('main section a[href^="mailto:"]')
         .first()
         .boundingBox();
       const tiles = await page.locator('main section ul li').first().boundingBox();
@@ -124,7 +124,7 @@ test.describe('Languages', () => {
       expect(card!.x > tiles!.x).toBe(cardIsRight);
       // the message card starts level with the first detail tile (below the heading)
       const cardTop = await page
-        .locator('main section a[href^="https://wa.me"]')
+        .locator('main section a[href^="mailto:"]')
         .first()
         .evaluate((el) => el.closest('div.relative')!.getBoundingClientRect().top);
       expect(Math.abs(cardTop - tiles!.y)).toBeLessThan(2);
@@ -221,7 +221,7 @@ test.describe('Languages', () => {
     }
   });
 
-  test('Arabic contact page is fully translated and keeps phone and email left-to-right', async ({
+  test('Arabic contact page is fully translated and keeps email left-to-right', async ({
     page,
   }) => {
     await page.goto('/ar/contact');
@@ -236,7 +236,6 @@ test.describe('Languages', () => {
     ]) {
       await expect(main).not.toContainText(english);
     }
-    await expect(main.locator('bdi[dir="ltr"]', { hasText: '+20 109 1539 396' })).toBeVisible();
     await expect(main.locator('a[href="mailto:info@rowad.com"]').first()).toBeVisible();
     const hrefs = await main
       .locator('a[href^="/"]')

@@ -29,7 +29,6 @@ export const englishJsonLd = {
       },
       contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+20-109-1539-396',
         contactType: 'customer service',
         email: 'info@rowad.com',
         availableLanguage: ['English', 'Arabic'],
@@ -65,7 +64,6 @@ export const englishJsonLd = {
       name: 'Rowad for Software Development',
       image: 'https://rowad.com/images/brand/og-image.jpg',
       url: 'https://rowad.com',
-      telephone: '+20-109-1539-396',
       email: 'info@rowad.com',
       address: {
         '@type': 'PostalAddress',
@@ -188,7 +186,7 @@ export const englishJsonLd = {
 
 /**
  * Arabic structured data. Only facts that are on the site or confirmed by the owner:
- * name, address, phone, email, links, opening hours (Sun-Thu 09:00-17:00) and the six services
+ * name, address, email, links, opening hours (Sun-Thu 09:00-17:00) and the six services
  * as described on the Arabic Services page. Founding year, staff size and price range are left
  * out because they are not confirmed.
  */
@@ -223,7 +221,6 @@ export const arabicJsonLd = {
       foundingDate: '1997',
       contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+20-109-1539-396',
         contactType: 'customer service',
         email: 'info@rowad.com',
         availableLanguage: ['Arabic', 'English'],
@@ -251,7 +248,6 @@ export const arabicJsonLd = {
       name: AR_SITE_NAME,
       image: `${SITE_URL}${AR_OG_IMAGE}`,
       url: pageUrl('ar', '/'),
-      telephone: '+20-109-1539-396',
       email: 'info@rowad.com',
       address: arAddress,
       openingHoursSpecification: [
