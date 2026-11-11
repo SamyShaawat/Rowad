@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
-import { RouteConstants, CompanyConstants } from '@constants';
+import { RouteConstants } from '@constants';
 import { getDictionary, localePath, type Locale } from '@/i18n';
 
 export function CTASection({ locale = 'en' }: { locale?: Locale }) {
@@ -24,12 +24,6 @@ export function CTASection({ locale = 'en' }: { locale?: Locale }) {
           >
             {t.primary} <ArrowRightIcon className="ms-2 h-4 w-4 rtl:rotate-180" />
           </Link>
-          <a
-            href={CompanyConstants.WHATSAPP}
-            className="inline-flex items-center rounded-full border border-white/30 px-6 py-3 text-sm font-semibold text-white transition-colors hover:border-white"
-          >
-            {t.whatsapp}
-          </a>
         </div>
       </div>
     </section>

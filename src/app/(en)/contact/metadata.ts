@@ -5,7 +5,7 @@ import { CompanyConstants } from '@constants';
 export const contactMetadata: Metadata = {
   title: 'Contact Rowad: Get a Free Consultation',
   description:
-    'Contact Rowad on WhatsApp or email for a free consultation on your website, mobile app, ERP, AI agent or chatbot. Alexandria, Egypt.',
+    'Contact Rowad by email for a free consultation on your website, mobile app, ERP, AI agent or chatbot. Alexandria, Egypt.',
   keywords: [
     'contact rowad',
     'rowad consultation',

@@ -8,7 +8,4 @@ export const CompanyConstants = {
   DESCRIPTION:
     'We design, build and run websites, mobile apps, ERP systems, AI agents and chatbots, with reliable hosting and DevOps behind them.',
   EMAIL: 'info@rowad.com',
-  PHONE: '+20 109 1539 396',
-  PHONE_HREF: '+201091539396',
-  WHATSAPP: 'https://wa.me/201091539396',
 } as const;

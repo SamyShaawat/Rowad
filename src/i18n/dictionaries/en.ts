@@ -26,7 +26,6 @@ export const en = {
     description: 'One team for all your software, from idea to production.',
     explore: 'Explore',
     reachUs: 'Reach Us',
-    callCenter: 'Call Center',
     inquiries: 'Inquiries',
     mainOffice: 'Based in',
   },
@@ -222,12 +221,9 @@ export const en = {
       'Have a project in mind? We would love to hear from you. Let us discuss how we can help.',
     messageTitle: 'Message us directly',
     messageBody:
-      'Tell us what you want to build. WhatsApp is the fastest way to reach us, and email works for longer briefs.',
-    whatsapp: 'Chat on WhatsApp',
+      'Tell us what you want to build. Email us your brief and we will get back to you.',
     infoTitle: 'Contact Information',
-    callNow: 'Call Us Now',
     cards: {
-      phone: { title: 'Phone' },
       email: { title: 'Email', note: 'Best for longer project briefs' },
       office: { title: 'Location', note: 'Online meetings, wherever you are' },
       hours: { title: 'Working Hours' },
@@ -295,6 +291,5 @@ export const en = {
     title: "Have an idea or a messy process? Let's talk.",
     body: 'A 30-minute call is free. You leave with a clear next step, whether you work with us or not.',
     primary: 'Book a free consultation',
-    whatsapp: 'WhatsApp us',
   },
 };

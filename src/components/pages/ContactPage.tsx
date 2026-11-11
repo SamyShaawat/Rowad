@@ -1,9 +1,7 @@
-import Link from 'next/link';
 import { PlusIcon } from '@heroicons/react/24/outline';
-import { ClockIcon, MailIcon, PhoneIcon, PinIcon } from '@/components/ui/icons';
+import { ClockIcon, MailIcon, PinIcon } from '@/components/ui/icons';
 import { CTASection } from '@/components/sections/CTASection';
 import { PageHero } from '@/components/ui/PageHero';
-import { WhatsAppIcon } from '@/components/ui/WhatsAppIcon';
 import { CompanyConstants } from '@constants';
 import { getDictionary, type Locale } from '@/i18n';
 
@@ -12,14 +10,8 @@ export function ContactPage({ locale }: { locale: Locale }) {
   const t = getDictionary(locale);
   const p = t.contactPage;
 
-  // Phone and email stay left-to-right inside Arabic text (bdi), so + and @ do not jump around.
+  // Email stays left-to-right inside Arabic text (bdi), so @ does not jump around.
   const contactInfo = [
-    {
-      icon: PhoneIcon,
-      title: p.cards.phone.title,
-      content: <bdi dir="ltr">{CompanyConstants.PHONE}</bdi>,
-      subtext: t.company.workingHours,
-    },
     {
       icon: MailIcon,
       title: p.cards.email.title,
@@ -56,15 +48,6 @@ export function ContactPage({ locale }: { locale: Locale }) {
               <p className="mt-4 text-base leading-relaxed text-slate-300">{p.messageBody}</p>
               <div className="mt-10 flex flex-col gap-3">
                 <a
-                  href={CompanyConstants.WHATSAPP}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center gap-2.5 rounded-full bg-orange-500 px-6 py-4 text-base font-semibold text-slate-950 transition-colors hover:bg-orange-400"
-                >
-                  <WhatsAppIcon className="h-5 w-5" />
-                  {p.whatsapp}
-                </a>
-                <a
                   href={`mailto:${CompanyConstants.EMAIL}`}
                   className="inline-flex items-center justify-center gap-2.5 rounded-full border border-white/30 px-6 py-4 text-base font-semibold text-white transition-colors hover:border-white"
                 >
@@ -99,19 +82,6 @@ export function ContactPage({ locale }: { locale: Locale }) {
                 </li>
               ))}
             </ul>
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-              <Link href={`tel:${CompanyConstants.PHONE_HREF}`} className="btn-primary">
-                {p.callNow}
-              </Link>
-              <Link
-                href={CompanyConstants.WHATSAPP}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary"
-              >
-                {p.whatsapp}
-              </Link>
-            </div>
           </div>
         </div>
       </section>
