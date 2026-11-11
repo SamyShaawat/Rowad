@@ -220,8 +220,7 @@ export const en = {
     intro:
       'Have a project in mind? We would love to hear from you. Let us discuss how we can help.',
     messageTitle: 'Message us directly',
-    messageBody:
-      'Tell us what you want to build. Email us your brief and we will get back to you.',
+    messageBody: 'Tell us what you want to build. Email us your brief and we will get back to you.',
     infoTitle: 'Contact Information',
     cards: {
       email: { title: 'Email', note: 'Best for longer project briefs' },
